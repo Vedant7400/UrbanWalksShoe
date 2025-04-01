@@ -1,0 +1,124 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 24 94% 53%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221 70% 33%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    @apply bg-background text-foreground;
+  }
+}
+
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.chatbot-container {
+  transition: all 0.3s ease;
+  border-radius: 1.25rem;
+}
+
+.funky-gradient {
+  background: linear-gradient(90deg, #9b87f5, #D946EF, #1EAEDB);
+  background-size: 200% 200%;
+  animation: gradient-animation 6s ease infinite;
+}
+
+.funky-shadow {
+  box-shadow: 0 8px 32px rgba(155, 135, 245, 0.2);
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.slider-container {
+  padding: 2rem 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-container::before,
+.slider-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 10;
+}
+
+.slider-container::before {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+}
+
+.slider-container::after {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
+}
+
+.neon-text {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #9b87f5, 0 0 20px #9b87f5, 0 0 25px #9b87f5;
+}
+
+.chat-suggestion {
+  @apply bg-brand-purple/10 text-sm py-2 px-3 rounded-full cursor-pointer hover:bg-brand-purple/20 transition-colors border border-brand-purple/30 inline-flex items-center justify-center;
+  white-space: nowrap;
+}
