@@ -1,0 +1,129 @@
+/* Chatbot container */
+.chatbot-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.chat-window {
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  width: 350px;
+  height: 500px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.message {
+  margin-bottom: 15px;
+  max-width: 85%;
+  padding: 12px 15px;
+  border-radius: 15px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.chat-window.active {
+  display: flex;
+}
+
+/* Chat header */
+.chat-header {
+  background: var(--salmon-pink);
+  padding: 15px;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Chat messages container */
+.chat-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 15px;
+  max-width: 80%;
+  padding: 10px 15px;
+  border-radius: 15px;
+  line-height: 1.4;
+}
+
+.bot-message {
+  background: #f0f0f0;
+  margin-right: auto;
+  border-bottom-left-radius: 5px;
+}
+
+.user-message {
+  background: var(--salmon-pink);
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 5px;
+}
+
+/* Chat input area */
+.chat-input {
+  padding: 15px;
+  border-top: 1px solid #eee;
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+}
+
+.chat-input button {
+  background: var(--salmon-pink);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.chat-input button:hover {
+  background: var(--eerie-black);
+}
+
+/* Quick replies */
+.quick-replies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.quick-reply {
+  background: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background 0.3s ease;
+}
+
+.quick-reply:hover {
+  background: #e0e0e0;
+}

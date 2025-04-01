@@ -1,0 +1,143 @@
+.about-hero {
+  background-color: var(--cultured-2);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.hero-title {
+  margin-bottom: 20px;
+  color: var(--eerie-black);
+}
+
+.hero-text {
+  color: var(--sonic-silver);
+  font-size: 1.1rem;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--eerie-black);
+}
+
+/* Story Section */
+.story-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.story-text {
+  color: var(--sonic-silver);
+  line-height: 1.8;
+}
+
+/* Mission & Values Section */
+.mission-values {
+  background-color: var(--cultured-2);
+}
+
+.mission-content {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.mission-text {
+  color: var(--sonic-silver);
+  line-height: 1.8;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.value-card {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.value-title {
+  color: var(--eerie-black);
+  margin-bottom: 15px;
+}
+
+.value-text {
+  color: var(--sonic-silver);
+}
+
+/* Team Section */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.team-card {
+  background-color: var(--cultured-2);
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.member-name {
+  color: var(--eerie-black);
+  margin-bottom: 10px;
+}
+
+.member-role {
+  color: var(--sonic-silver);
+}
+
+/* Achievements Section */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.achievement-card {
+  text-align: center;
+}
+
+.achievement-number {
+  color: var(--eerie-black);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.achievement-text {
+  color: var(--sonic-silver);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .values-grid,
+  .team-grid,
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+}
