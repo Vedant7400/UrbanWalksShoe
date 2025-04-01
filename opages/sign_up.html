@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Footcap</title>
+  <link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .sign-up-section {
+      min-height: calc(100vh - 90px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 15px;
+    }
+
+    .sign-up-container {
+      max-width: 500px;
+      width: 100%;
+      background: var(--cultured);
+      padding: 40px 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .sign-up-title {
+      color: var(--rich-black-fogra-29);
+      font-size: var(--fs-3);
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .input-wrapper {
+      margin-bottom: 20px;
+    }
+
+    .input-wrapper label {
+      display: block;
+      color: var(--onyx);
+      font-size: var(--fs-7);
+      margin-bottom: 8px;
+    }
+
+    .input-wrapper input {
+      width: 100%;
+      padding: 10px 15px;
+      border: 1px solid var(--gainsboro);
+      border-radius: 4px;
+      font-size: var(--fs-7);
+    }
+
+    .input-wrapper input:focus {
+      border-color: var(--salmon-pink);
+      outline: none;
+    }
+
+    .btn.btn-primary.sign-up-btn {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .sign-in-link {
+      text-align: center;
+      font-size: var(--fs-7);
+      color: var(--sonic-silver);
+    }
+
+    .sign-in-link a {
+      color: var(--salmon-pink);
+      text-decoration: none;
+    }
+
+    .sign-in-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container" style="display: flex; justify-content: center; align-items: center;">
+      <a href="#" class="logo">
+        <img src="../assets/images/logo.svg" width="160" height="50" alt="Footcap logo">
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="sign-up-section">
+      <div class="sign-up-container">
+        <h2 class="sign-up-title">Create Account</h2>
+
+        <form action="#" method="POST">
+          <div class="input-wrapper">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary sign-up-btn">Sign Up</button>
+
+          <p class="sign-in-link">
+            Already have an account? <a href="sign_in.html">Sign In</a>
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

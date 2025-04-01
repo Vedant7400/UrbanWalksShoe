@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile - Footcap</title>
+  <!-- Update CSS paths in head -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/profile.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- In the head section, add this line after other CSS links -->
+  <link rel="stylesheet" href="../assets/css/profile.css">
+</head>
+
+<body>
+    <header class="header" data-header>
+        <div class="container">
+    
+          <div class="overlay" data-overlay></div>
+    
+          <a href="#" class="logo">
+            <img src="./assets/images/logo.svg" width="160" height="50" alt="Footcap logo">
+          </a>
+    
+          <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+    
+          <nav class="navbar" data-navbar>
+    
+            <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+    
+            <a href="#" class="logo">
+              <img src="./assets/images/logo.svg" width="190" height="50" alt="Footcap logo">
+            </a>
+    
+            <ul class="navbar-list">
+    
+              <li class="navbar-item">
+                <a href="#" class="navbar-link">Home</a>
+              </li>
+    
+              <li class="navbar-item">
+                <a href="#" class="navbar-link">About</a>
+              </li>
+    
+              <li class="navbar-item">
+                <a href="#" class="navbar-link">Products</a>
+              </li>
+    
+              <li class="navbar-item">
+                <a href="#" class="navbar-link">Shop</a>
+              </li>
+    
+              <li class="navbar-item">
+                <a href="#" class="navbar-link">Blog</a>
+              </li>
+    
+              <li class="navbar-item">
+                <a href="#" class="navbar-link">Contact</a>
+              </li>
+    
+            </ul>
+    
+            <ul class="nav-action-list">
+    
+              <li>
+                <button class="nav-action-btn">
+                  <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+    
+                  <span class="nav-action-text">Search</span>
+                </button>
+              </li>
+    
+              <li>
+                <a href="#" class="nav-action-btn">
+                  <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+    
+                  <span class="nav-action-text">Login / Register</span>
+                </a>
+              </li>
+    
+              <li>
+                <button class="nav-action-btn">
+                  <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+    
+                  <span class="nav-action-text">Wishlist</span>
+    
+                  <data class="nav-action-badge" value="5" aria-hidden="true">5</data>
+                </button>
+              </li>
+    
+              <li>
+                <button class="nav-action-btn">
+                  <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
+    
+                  <data class="nav-action-text" value="318.00">Basket: <strong>$318.00</strong></data>
+    
+                  <data class="nav-action-badge" value="4" aria-hidden="true">4</data>
+                </button>
+              </li>
+    
+            </ul>
+    
+          </nav>
+    
+        </div>
+      </header>
+    
+    
+
+  <!-- Update the main section structure -->
+  <main>
+    <div class="profile-container">
+      <div class="profile-header">
+        <h1 class="profile-title">My Profile</h1>
+      </div>
+  
+      <div class="profile-content">
+        <!-- User Info Section -->
+        <section class="profile-section user-info">
+          <h2 class="h3">Personal Information</h2>
+          <div class="info-grid">
+            <div class="info-item">
+              <label>Name:</label>
+              <p>John Doe</p>
+            </div>
+            <div class="info-item">
+              <label>Email:</label>
+              <p>johndoe@example.com</p>
+            </div>
+            <div class="info-item">
+              <label>Phone:</label>
+              <p>+1 234 567 8900</p>
+            </div>
+          </div>
+          <button class="btn btn-primary">Edit Profile</button>
+        </section>
+
+        <!-- Order History Section -->
+        <section class="profile-section order-history">
+          <h2 class="h3">Order History</h2>
+          <div class="order-list">
+            <div class="order-item">
+              <div class="order-header">
+                <span class="order-id">Order #12345</span>
+                <span class="order-date">March 15, 2024</span>
+                <span class="order-status">Delivered</span>
+              </div>
+              <div class="order-products">
+                <img src="./assets/images/shoe-1.jpg" alt="Nike Air Max">
+                <div class="product-details">
+                  <h4>Nike Air Max</h4>
+                  <p>Size: 42 | Color: Black</p>
+                  <p class="price">$199.99</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Shipping Address Section -->
+        <section class="profile-section shipping-address">
+          <h2 class="h3">Shipping Address</h2>
+          <div class="address-card">
+            <p>123 Main Street</p>
+            <p>Apt 4B</p>
+            <p>New York, NY 10001</p>
+            <p>United States</p>
+            <button class="btn btn-outline">Edit Address</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top section">
+      <div class="container">
+        <!-- In footer section -->
+        <div class="footer-brand">
+          <a href="../index.html" class="logo">
+            <img src="../assets/images/urban.jpeg" width="160" height="50" alt="Footcap logo">
+          </a>
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-link-box">
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Contact Us</p>
+            </li>
+            <li>
+              <address class="footer-link">
+                <ion-icon name="location"></ion-icon>
+                <span class="footer-link-text">
+                  2751 S Parker Rd, Aurora, CO 80014, United States
+                </span>
+              </address>
+            </li>
+            <li>
+              <a href="tel:+1234567890" class="footer-link">
+                <ion-icon name="call"></ion-icon>
+                <span class="footer-link-text">+123 456 7890</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@footcap.com" class="footer-link">
+                <ion-icon name="mail"></ion-icon>
+                <span class="footer-link-text">info@footcap.com</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">My Account</p>
+            </li>
+            <li>
+              <a href="#" class="footer-link">My Account</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">My Cart</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">My Wishlist</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">My Orders</a>
+            </li>
+          </ul>
+
+          <div class="footer-list">
+            <p class="footer-list-title">Opening Time</p>
+            <table class="footer-table">
+              <tbody>
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Mon - Tue:</th>
+                  <td class="table-data">8AM - 10PM</td>
+                </tr>
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Wed:</th>
+                  <td class="table-data">8AM - 7PM</td>
+                </tr>
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Fri:</th>
+                  <td class="table-data">7AM - 12PM</td>
+                </tr>
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Sat:</th>
+                  <td class="table-data">9AM - 8PM</td>
+                </tr>
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Sun:</th>
+                  <td class="table-data">Closed</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="footer-list">
+            <p class="footer-list-title">Newsletter</p>
+            <p class="newsletter-text">
+              Authoritatively morph 24/7 potentialities with error-free partnerships.
+            </p>
+            <form action="" class="newsletter-form">
+              <input type="email" name="email" required placeholder="Email Address" class="newsletter-input">
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2024 <a href="#" class="copyright-link">Footcap</a>. All Rights Reserved
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Before closing body tag -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - Footcap</title>
+  <link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/cart.css">
+</head>
+<body>
+  <header class="header" data-header>
+    <div class="container">
+      <div class="overlay" data-overlay></div>
+
+      <a href="../index.html" class="logo">
+        <img src="../assets/images/logo.svg" width="160" height="50" alt="Footcap logo">
+      </a>
+
+      <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+        <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        <a href="../index.html" class="logo">
+          <img src="../assets/images/logo.svg" width="190" height="50" alt="Footcap logo">
+        </a>
+
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="../index.html" class="navbar-link">Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="../snkr.html" class="navbar-link">Sneakers</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="Contact Us.html" class="navbar-link">Contact</a>
+          </li>
+        </ul>
+
+        <ul class="nav-action-list">
+          <li>
+            <button class="nav-action-btn">
+              <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+              <span class="nav-action-text">Search</span>
+            </button>
+          </li>
+
+          <li>
+            <a href="./sign_in.html" class="nav-action-btn">
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+              <span class="nav-action-text">Login / Register</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="./wishlist.html" class="nav-action-btn">
+              <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+              <span class="nav-action-text">Wishlist</span>
+              <data class="nav-action-badge" value="5" aria-hidden="true">5</data>
+            </a>
+          </li>
+
+          <li>
+            <button class="nav-action-btn">
+              <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
+              <data class="nav-action-text" value="318.00">Basket: <strong>$318.00</strong></data>
+              <data class="nav-action-badge" value="4" aria-hidden="true">4</data>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="cart-container">
+      <div class="cart-header">
+        <h2 class="cart-title">Shopping Cart</h2>
+        <a href="../index.html" class="continue-shopping">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+          Continue Shopping
+        </a>
+      </div>
+      
+      <div class="cart-content">
+        <div class="cart-items" id="cartItems">
+          <!-- Cart items will be dynamically added here -->
+        </div>
+
+        <div class="cart-summary" id="cartSummary" style="display: none;">
+          <h3 class="summary-title">Order Summary</h3>
+          
+          <div class="summary-details">
+            <div class="summary-row">
+              <span>Items:</span>
+              <span id="itemCount">0</span>
+            </div>
+            <div class="summary-row">
+              <span>Subtotal:</span>
+              <span id="subtotal">$0.00</span>
+            </div>
+            <div class="summary-row">
+              <span>Shipping:</span>
+              <span>$10.00</span>
+            </div>
+            <div class="summary-row total">
+              <strong>Total:</strong>
+              <strong id="total">$0.00</strong>
+            </div>
+          </div>
+
+          <div class="promo-code">
+            <input type="text" placeholder="Enter promo code" class="promo-input">
+            <button class="apply-promo">Apply</button>
+          </div>
+
+          <button class="checkout-btn">
+            <span>Proceed to Checkout</span>
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </button>
+
+          <div class="payment-methods">
+            <p>We Accept:</p>
+            <div class="payment-icons">
+              <ion-icon name="card-outline"></ion-icon>
+              <ion-icon name="logo-paypal"></ion-icon>
+              <ion-icon name="logo-bitcoin"></ion-icon>
+              <ion-icon name="wallet-outline"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top section">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.svg" width="160" height="50" alt="Footcap logo">
+          </a>
+
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-link-box">
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Contact Us</p>
+            </li>
+
+            <li>
+              <address class="footer-link">
+                <ion-icon name="location"></ion-icon>
+                <span class="footer-link-text">
+                  2751 S Parker Rd, Aurora, CO 80014, United States
+                </span>
+              </address>
+            </li>
+
+            <li>
+              <a href="tel:+557343673257" class="footer-link">
+                <ion-icon name="call"></ion-icon>
+                <span class="footer-link-text">+557343673257</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="mailto:footcap@help.com" class="footer-link">
+                <ion-icon name="mail"></ion-icon>
+                <span class="footer-link-text">footcap@help.com</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">My Account</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+                <span class="footer-link-text">My Account</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+                <span class="footer-link-text">View Cart</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+                <span class="footer-link-text">Wishlist</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+                <span class="footer-link-text">Compare</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+                <span class="footer-link-text">New Products</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="footer-list">
+            <p class="footer-list-title">Opening Time</p>
+
+            <table class="footer-table">
+              <tbody>
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Mon - Tue:</th>
+                  <td class="table-data">8AM - 10PM</td>
+                </tr>
+
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Wed:</th>
+                  <td class="table-data">8AM - 7PM</td>
+                </tr>
+
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Fri:</th>
+                  <td class="table-data">7AM - 12PM</td>
+                </tr>
+
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Sat:</th>
+                  <td class="table-data">9AM - 8PM</td>
+                </tr>
+
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Sun:</th>
+                  <td class="table-data">Closed</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="footer-list">
+            <p class="footer-list-title">Newsletter</p>
+
+            <p class="newsletter-text">
+              Authoritatively morph 24/7 potentialities with error-free partnerships.
+            </p>
+
+            <form action="" class="newsletter-form">
+              <input type="email" name="email" required placeholder="Email Address" class="newsletter-input">
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2022 <a href="#" class="copyright-link">codewithsadee</a>. All Rights Reserved
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- Product Details Modal -->
+  <div id="productModal" class="modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4);">
+    <div class="modal-content" style="background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 80%; max-width: 600px; border-radius: 8px;">
+      <span class="close" style="color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+      <div id="productDetails"></div>
+    </div>
+  </div>
+
+  <script>
+    // Load cart items from localStorage
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const cartItemsContainer = document.getElementById('cartItems');
+    const cartSummary = document.getElementById('cartSummary');
+    const subtotalElement = document.getElementById('subtotal');
+    const totalElement = document.getElementById('total');
+    const modal = document.getElementById('productModal');
+    const productDetails = document.getElementById('productDetails');
+    const closeBtn = document.getElementsByClassName('close')[0];
+
+    function updateCartDisplay() {
+      if (cartItems.length === 0) {
+        cartItemsContainer.innerHTML = '<div class="cart-empty">Your cart is empty</div>';
+        cartSummary.style.display = 'none';
+        return;
+      }
+
+      cartSummary.style.display = 'block';
+      cartItemsContainer.innerHTML = '';
+      let subtotal = 0;
+
+      cartItems.forEach((item, index) => {
+        const price = parseFloat(item.price.replace('$', ''));
+        subtotal += price * (item.quantity || 1);
+
+        const cartItemElement = document.createElement('div');
+        cartItemElement.className = 'cart-item';
+        cartItemElement.innerHTML = `
+          <img src="${item.image}" alt="${item.name}" style="cursor: pointer;" onclick="showProductDetails(${index})">
+          <div class="item-details">
+            <h3 class="item-name">${item.name}</h3>
+            <p class="item-price">$${(price * (item.quantity || 1)).toFixed(2)}</p>
+            <div class="quantity-controls">
+              <button class="quantity-btn" onclick="updateQuantity(${index}, -1)">-</button>
+              <span>${item.quantity || 1}</span>
+              <button class="quantity-btn" onclick="updateQuantity(${index}, 1)">+</button>
+              <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+            </div>
+          </div>
+        `;
+        cartItemsContainer.appendChild(cartItemElement);
+      });
+
+      subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+      totalElement.textContent = `$${(subtotal + 10).toFixed(2)}`;
+    }
+
+    window.updateQuantity = function(index, change) {
+      cartItems[index].quantity = (cartItems[index].quantity || 1) + change;
+      if (cartItems[index].quantity < 1) cartItems[index].quantity = 1;
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      updateCartDisplay();
+      updateBadges();
+    };
+
+    window.removeItem = function(index) {
+      cartItems.splice(index, 1);
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      updateCartDisplay();
+      updateBadges();
+    };
+
+    function updateBadges() {
+      const cartCount = document.getElementById('cartCount');
+      cartCount.textContent = cartItems.length;
+
+      const wishlistItems = JSON.parse(localStorage.getItem('wishlistItems')) || [];
+      const wishlistCount = document.getElementById('wishlistCount');
+      wishlistCount.textContent = wishlistItems.length;
+    }
+
+    // Show product details in modal
+    window.showProductDetails = function(index) {
+      const item = cartItems[index];
+      const sizes = ['US 7', 'US 8', 'US 9', 'US 10', 'US 11', 'US 12'];
+      const colors = ['Black', 'White', 'Red', 'Blue', 'Grey'];
+      
+      productDetails.innerHTML = `
+        <div style="text-align: center;">
+          <img src="${item.image}" alt="${item.name}" style="max-width: 300px; margin-bottom: 20px;">
+          <h2 style="margin-bottom: 15px;">${item.name}</h2>
+          <p style="font-size: 1.2em; margin-bottom: 15px;">Price: $${item.price}</p>
+          <div style="margin-bottom: 20px;">
+            <h3 style="margin-bottom: 10px;">Available Sizes:</h3>
+            <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+              ${sizes.map(size => `<button style="padding: 8px 16px; margin: 5px; border: 1px solid #ddd; border-radius: 4px; cursor: pointer;">${size}</button>`).join('')}
+            </div>
+          </div>
+          <div style="margin-bottom: 20px;">
+            <h3 style="margin-bottom: 10px;">Available Colors:</h3>
+            <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+              ${colors.map(color => `<button style="padding: 8px 16px; margin: 5px; border: 1px solid #ddd; border-radius: 4px; cursor: pointer;">${color}</button>`).join('')}
+            </div>
+          </div>
+          <div style="margin-top: 20px;">
+            <h3 style="margin-bottom: 10px;">Product Details:</h3>
+            <p>Brand: ${item.brand}</p>
+            <p>Category: ${item.categories.join(', ')}</p>
+            <p>Material: Premium quality materials</p>
+            <p>Style: Modern and comfortable design</p>
+          </div>
+        </div>
+      `;
+      modal.style.display = "block";
+    };
+
+    // Close modal when clicking the close button or outside the modal
+    closeBtn.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    // Initial display
+    updateCartDisplay();
+    updateBadges();
+  </script>
+</body>
+</html>
